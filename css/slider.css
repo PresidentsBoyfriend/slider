@@ -1,0 +1,79 @@
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .descr{ 
+        max-width: 1040px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .descr{ 
+        max-width: 840px;
+    }
+}
+
+@media (max-width: 767px) {
+    .descr{ 
+        max-width: 740px;
+    }
+}
+
+@media (max-width: 480px) {
+    descr{ 
+        max-width: 440px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.poster{
+    height:200px;
+    width:310px;
+    margin-bottom: 100px;
+    position: static;
+}
+
+.wow {
+    position: static;
+}
+
+.section-img {
+    position: static;
+}
+
+.row {
+    position: static;
+}
+
+.descr{
+    display:none;
+    width: 400px;
+    height: 550px;
+    margin-left: -200px;
+    position: absolute;
+    top: 40px;  
+    left: 50%;
+    padding: 5px;
+    background:#f3f3f3;
+    -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+}
+
+.poster:hover .descr{
+    display:block;
+    position: absolute;
+    z-index:10;
+}
+
+.poster:hover body{
+    background: rgba(0,0,0,0.3);
+}
