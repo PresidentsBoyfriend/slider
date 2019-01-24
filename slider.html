@@ -11,286 +11,466 @@
 <body>
     <div class="container-slider">
         <div class="row section2">
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
+                    <div class="poster center-block" id="toggler">
                         <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel1" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                        <h5 class="text-center">Text</h5>
+                    </div>
+                        <div class="descr" id="box1" >
+                            <span class="glyphicon glyphicon-remove" id="deleter_1"></span>
+                            <div id="dws-slider_1" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_1" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_1" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elit lorem, ac congue mi
+                                                eleifend sit amet. Sed dignissim viverra neque a tristique.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>Aenean cursus imperdiet erat sit amet facilisis. Phasellus congue, sem in consectetur accumsan,
+                                                tellus risus sollicitudin mauris, quis ornare libero magna eget ex.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>Praesent dictum, orci eget eleifend auctor, urna ex dapibus odio, vitae pretium neque massa vel
+                                                neque. Donec et interdum diam. Morbi dignissim vestibulum mi ac viverra.</p>
                                         </div>
                                     </div>
                                 </div>
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
+                <script type="text/javascript">
+                    document.querySelector('#toggler').onclick = function() {
+                    openboxFirst();
+                }
+                document.querySelector('#deleter_1').onclick = function() {
+                    deleteFirst();
+                }
+                function deleteFirst() {
+                    let div = document.querySelector('#box1'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+                function openboxFirst() {
+                    let div = document.querySelector('#box1');
+                    let background = document.querySelector('body');
+                    div.style.display = 'block';
+                    background.style.background = 'rgba(0,0,0,0.7)';
+                }
+                </script>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+                
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                    <div class="poster center-block" id="toggler2">
+                            <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
+                            <h5 class="text-center">Text</h5>
+                        </div>
+                        <div class="descr" id="box2">
+                            <span class="glyphicon glyphicon-remove" id="deleter_2"></span>
+                            <div id="dws-slider_2" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_2" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_2" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>2.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>2.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>2.</p>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_2" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_2" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
+                <script type="text/javascript">
+                    document.querySelector('#toggler2').onclick = function() {
+                    openboxSecond();
+                }
+                document.querySelector('#deleter_2').onclick = function() {
+                    deleteSecond();
+                }
+                function deleteSecond() {
+                    let div = document.querySelector('#box2'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+                function openboxSecond() {
+                    let div = document.querySelector('#box2');
+                    let background = document.querySelector('body');
+                    div.style.display = 'block';
+                    background.style.background = 'rgba(0,0,0,0.7)';
+                }
+                </script>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                    <div class="poster center-block" id="toggler3">
+                            <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
+                            <h5 class="text-center">Text</h5>
+                        </div>
+                        <div class="descr" id="box3">
+                            <span class="glyphicon glyphicon-remove" id="deleter_3"></span>
+                            <div id="dws-slider_3" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_3" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_3" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_3" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elit lorem, ac congue mi
+                                                eleifend sit amet. Sed dignissim viverra neque a tristique.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>Aenean cursus imperdiet erat sit amet facilisis. Phasellus congue, sem in consectetur accumsan,
+                                                tellus risus sollicitudin mauris, quis ornare libero magna eget ex.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>Praesent dictum, orci eget eleifend auctor, urna ex dapibus odio, vitae pretium neque massa vel
+                                                neque. Donec et interdum diam. Morbi dignissim vestibulum mi ac viverra.</p>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_3" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_3" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
+                <script type="text/javascript">
+                    document.querySelector('#toggler3').onclick = function() {
+                    openboxThird();
+                }
+                document.querySelector('#deleter_3').onclick = function() {
+                    deleteThird();
+                }
+                function deleteThird() {
+                    let div = document.querySelector('#box3'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+                function openboxThird() {
+                    let div = document.querySelector('#box3');
+                    let background = document.querySelector('body');
+                    div.style.display = 'block';
+                    background.style.background = 'rgba(0,0,0,0.7)';
+                }
+                </script>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                        <div class="poster center-block" id="toggler4">
+                                <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
+                                <h5 class="text-center">Text</h5>
+                            </div>
+                        <div class="descr" id="box4">
+                            <span class="glyphicon glyphicon-remove" id="deleter_4"></span>
+                            <div id="dws-slider_4" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_4" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_4" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elit lorem, ac congue mi
+                                                eleifend sit amet. Sed dignissim viverra neque a tristique.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>Aenean cursus imperdiet erat sit amet facilisis. Phasellus congue, sem in consectetur accumsan,
+                                                tellus risus sollicitudin mauris, quis ornare libero magna eget ex.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>Praesent dictum, orci eget eleifend auctor, urna ex dapibus odio, vitae pretium neque massa vel
+                                                neque. Donec et interdum diam. Morbi dignissim vestibulum mi ac viverra.</p>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_4" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_4" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
+                <script type="text/javascript">
+                    document.querySelector('#toggler4').onclick = function() {
+                    openboxFour();
+                }
+                document.querySelector('#deleter_4').onclick = function() {
+                    deleteFour();
+                }
+                function deleteFour() {
+                    let div = document.querySelector('#box4'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+                function openboxFour() {
+                    let div = document.querySelector('#box4');
+                    let background = document.querySelector('body');
+                    div.style.display = 'block';
+                    background.style.background = 'rgba(0,0,0,0.7)';
+                }
+                </script>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                        <div class="poster center-block" id="toggler5">
+                                <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
+                                <h5 class="text-center">Text</h5>
+                            </div>
+                        <div class="descr" id="box5">
+                            <span class="glyphicon glyphicon-remove" id="deleter_5"></span>
+                            <div id="dws-slider_5" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_5" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_5" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_5" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elit lorem, ac congue mi
+                                                eleifend sit amet. Sed dignissim viverra neque a tristique.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>Aenean cursus imperdiet erat sit amet facilisis. Phasellus congue, sem in consectetur accumsan,
+                                                tellus risus sollicitudin mauris, quis ornare libero magna eget ex.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>Praesent dictum, orci eget eleifend auctor, urna ex dapibus odio, vitae pretium neque massa vel
+                                                neque. Donec et interdum diam. Morbi dignissim vestibulum mi ac viverra.</p>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_5" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_5" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <div class="bg"></div>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
+                <script type="text/javascript">
+                    document.querySelector('#toggler5').onclick = function() {
+                    openboxFive();
+                }
+                document.querySelector('#deleter_5').onclick = function() {
+                    deleteFive();
+                }
+                function deleteFive() {
+                    let div = document.querySelector('#box5'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+                function openboxFive() {
+                    let div = document.querySelector('#box5');
+                    let background = document.querySelector('body');
+                    div.style.display = 'block';
+                    background.style.background = 'rgba(0,0,0,0.7)';
+                }
+                </script>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
+            <div class="col-lg-4 col-md-4 col-sm-6 wow" style="visibility: visible;">
                 <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                    <div class="poster center-block" id="toggler6">
+                            <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="300" height="225">
+                            <h5 class="text-center">Text</h5>
+                        </div>
+                        <div class="descr" id="box6">
+                            <span class="glyphicon glyphicon-remove" id="deleter_6"></span>
+                            <div id="dws-slider_6" class="carousel slide" data-ride="carousel">
+                                <!--Показатели-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dws-slider_6" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dws-slider_6" data-slide-to="1"></li>
+                                    <li data-target="#dws-slider_6" data-slide-to="2"></li>
+                                </ol>
+                        
+                                <!--Обертка для слайдов-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-1.jpg" alt="Картинка 1">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Адаптивный слайдер</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elit lorem, ac congue mi
+                                                eleifend sit amet. Sed dignissim viverra neque a tristique.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-2.jpg" alt="Картинка 2">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Анимированная прокрутка</h3>
+                                            <p>Aenean cursus imperdiet erat sit amet facilisis. Phasellus congue, sem in consectetur accumsan,
+                                                tellus risus sollicitudin mauris, quis ornare libero magna eget ex.</p>
                                         </div>
                                     </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
+                                    <div class="item"><img src="https://dwstroy.ru/lessons/les3649/demo/img/slider-3.jpg" alt="Картинка 3">
                                         <div class="carousel-caption">
+                                            <h3 class="text-uppercase">Простая установка</h3>
+                                            <p>Praesent dictum, orci eget eleifend auctor, urna ex dapibus odio, vitae pretium neque massa vel
+                                                neque. Donec et interdum diam. Morbi dignissim vestibulum mi ac viverra.</p>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!--Элементы управления-->
+                                <a class="left carousel-control" href="#dws-slider_6" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dws-slider_6" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
+                            <h5 class="text-center">Text</h5>
                         </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
-                <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="450">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                        </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow" style="visibility: visible;">
-                <div class="section-img">
-                    <div class="poster center-block">
-                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="300" height="225">
-                        <div class="descr ">
-                            <div id="testCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Слайд 1 -->
-                                    <div class="item active">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="245">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <!-- Слайд 2 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="245">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <!-- Слайд 3 -->
-                                    <div class="item">
-                                        <img src="https://www.w3schools.com/bootstrap/img_chania.jpg" alt="img1" width="600" height="245">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                            <h5>Text</h5>
-                        </div>
-                    </div>
-                    <h5 class="text-center">Text</h5>
-                </div>
-            </div>
+            <script type="text/javascript">
+                document.querySelector('#toggler6').onclick = function() {
+                openboxSix();
+            }
+            document.querySelector('#deleter_6').onclick = function() {
+                    deleteSix();
+                }
+                function deleteSix() {
+                    let div = document.querySelector('#box6'); 
+                    let background = document.querySelector('body');
+                    div.style.display = 'none';
+                    background.style.background = 'rgba(0,0,0,0.0)';
+                }
+            function openboxSix() {
+                let div = document.querySelector('#box6');
+                let background = document.querySelector('body');
+                div.style.display = 'block';
+                background.style.background = 'rgba(0,0,0,0.7)';
+            }
+            </script>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
