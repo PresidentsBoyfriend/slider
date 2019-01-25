@@ -288,6 +288,14 @@
             </div>
 
             <script type="text/javascript">
+            if (window.matchMedia('(max-width: 991px)').matches) {
+                if(window.matchMedia('(min-width: 768px)').matches) {
+                    let div_3 = document.querySelector('#box3'); 
+                    let div_4 = document.querySelector('#box4'); 
+                    let div_5 = document.querySelector('#box5');
+                    let div_6 = document.querySelector('#box6'); 
+                }
+            }
             // Вызов открытия блоков
             document.querySelector('#toggler').onclick = function() {
                 checkOpenDiv('1');
@@ -363,24 +371,44 @@
                 let background = document.querySelector('.background-hide');
                 div.style.display = 'block';
                 background.style.display = 'block';
+                if (window.matchMedia('(max-width: 991px)').matches) {
+                    if (window.matchMedia('(min-width: 768px)').matches) {
+                        div.style.top = '300px';
+                    }
+                }
             }
             function openboxFour() {
                 let div = document.querySelector('#box4');
                 let background = document.querySelector('.background-hide');
                 div.style.display = 'block';
                 background.style.display = 'block';
+                if (window.matchMedia('(max-width: 991px)').matches) {
+                    if (window.matchMedia('(min-width: 768px)').matches) {
+                        div.style.top = '300px';
+                    }
+                }
             }
             function openboxFive() {
                 let div = document.querySelector('#box5');
                 let background = document.querySelector('.background-hide');
                 div.style.display = 'block';
                 background.style.display = 'block';
+                if (window.matchMedia('(max-width: 991px)').matches) {
+                    if (window.matchMedia('(min-width: 768px)').matches) {
+                        div.style.top = '600px';
+                    }
+                }
             }
             function openboxSix() {
                 let div = document.querySelector('#box6');
                 let background = document.querySelector('.background-hide');
                 div.style.display = 'block';
                 background.style.display = 'block';
+                if (window.matchMedia('(max-width: 991px)').matches) {
+                    if (window.matchMedia('(min-width: 768px)').matches) {
+                        div.style.top = '600px';
+                    }
+                }
             }
             // Удаление блоков
             document.querySelector('#deleter_1').onclick = function() {

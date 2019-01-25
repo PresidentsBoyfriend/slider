@@ -17,7 +17,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .descr{ 
         max-width: 980px;
-        top: 45%;
+        top: 0;
         left: 0;
     }
     .carousel {
