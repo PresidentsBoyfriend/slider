@@ -1,10 +1,13 @@
 @media (min-width: 1200px) {
-    
+    .descr{
+        left: 0;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .descr{ 
         max-width: 1040px;
+        left: 0;
     }
 }
 
@@ -12,11 +15,17 @@
     .descr{ 
         max-width: 840px;
     }
+    .carousel-inner {
+        padding: 5px;
+    }
 }
 
 @media (max-width: 767px) {
     .descr{ 
         max-width: 740px;
+    }
+    .carousel-inner {
+        padding: 5px;
     }
 }
 
@@ -24,20 +33,29 @@
     descr{ 
         max-width: 440px;
     }
+    .carousel-inner {
+        padding: 6px;
+    }
 }
 
-body {
-    background: white;
-    
-}
 
+.background-hide{
+    background-color:rgba(0,0,0,.7);
+    height:100%;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display: none;
+    z-index: 9;
+}
 .glyphicon{
     size: 10px;
     position: absolute;
     right: 0;   
     cursor: pointer;
     z-index: 12;
-    padding: 1.2px;
+    padding: 3px .5px;
     
 }
 
@@ -60,6 +78,7 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    z-index: 1;
 }
 
 .poster{
@@ -80,6 +99,7 @@ body {
     -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
     -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
     box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
 .carousel-inner {
@@ -87,7 +107,6 @@ body {
     width: 98%;
     overflow: hidden;
     margin: 0 auto;
-    padding: 5px;
 }
 
 .carousel-control.left {
