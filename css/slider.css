@@ -3,6 +3,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        max-height: fit-content;
         margin-right: -50%;
         transform: translate(-50%, -50%)
     }
@@ -22,6 +23,7 @@
         padding: 10px;
         top: 0;
         left: 0; 
+        max-height: fit-content;
     }
 }
 
@@ -29,8 +31,9 @@
     .descr{ 
         max-width: 980px;
         padding: 10px;
-        top: 0;
+        top: 15%;
         left: 0; 
+        max-height: fit-content;
     }
     .carousel {
         padding: 5px;
@@ -41,8 +44,9 @@
     .descr{ 
         max-width: 740px;
         padding: 10px;
-        top: 0;
-        left: 0; 
+        top: 25%;
+        left: 0;
+        max-height: fit-content; 
     }
     .carousel {
         padding: 5px;
@@ -51,9 +55,10 @@
 
 @media (max-width: 480px) {
     .descr{ 
-        max-width: 440px;
+        max-width: 470px;
         padding: 10px;
-        top: 0;
+        top: 35%;
+        max-height: fit-content;
         left: 0; 
     }
     .carousel {
@@ -111,9 +116,10 @@
 }
 
 .descr{
+    overflow-y: scroll;
     display:none;
     width: auto;
-    height: auto;
+    height: 95%;
     margin: 15px;
     position: fixed;
     background:#f3f3f3;
